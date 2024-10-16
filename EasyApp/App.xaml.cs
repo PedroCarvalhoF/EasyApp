@@ -1,12 +1,18 @@
-﻿namespace EasyApp
+﻿using EasyApp.Pages;
+using EasyApp.Services.ConexaoAPI;
+
+namespace EasyApp
 {
     public partial class App : Application
     {
-        public App()
+        private readonly IApiService _apiService;
+
+        public App(IApiService apiService)
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            _apiService = apiService;
+            MainPage =new NavigationPage(new LoginPage(_apiService));
+            
         }
     }
 }

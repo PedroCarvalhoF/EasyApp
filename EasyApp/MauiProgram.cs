@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using EasyApp.Services.ConexaoAPI;
+using Microsoft.Extensions.Logging;
 
 namespace EasyApp
 {
@@ -16,8 +17,10 @@ namespace EasyApp
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddTransient<IApiService, ApiService>();
 
             return builder.Build();
         }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyApp.Pages.LoginPage"
+             Title="LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="auto,auto,auto,auto,*"
+          RowSpacing="20"
+          Margin="20,150,20,40">
+
+        <Image Grid.Row="0"
+               Source="usuario_cicle_cinza.png"
+               Aspect="AspectFill"
+               HeightRequest="100"
+               WidthRequest="100"/>
+        
+        <Label Grid.Row="1"
+               Text="Login"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <Frame Grid.Row="2"
+               Padding="15"
+               BackgroundColor="White">
+
+            <VerticalStackLayout>
+                <Entry Placeholder="Informe o e-mail"
+                       x:Name="txtEmail"/>
+                <Entry Placeholder="Informe sua SENHAAAA"
+                       IsPassword="True"
+                       x:Name="txtSenha"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Grid.Row="3"
+                Text="Login"
+                x:Name="btnLogin"
+                BackgroundColor="#5C606A"
+                Clicked="btnLogin_Clicked"/>
+
+
+    </Grid>
+</ContentPage>
