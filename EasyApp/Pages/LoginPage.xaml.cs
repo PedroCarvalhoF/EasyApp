@@ -25,6 +25,8 @@ public partial class LoginPage : ContentPage
             Preferences.Set("usuarioId", result.Data.IdUser.ToString());
             Preferences.Set("usuarioNome", result.Data.Nome);
             await DisplayAlert("Login", "Login Realizado com Sucesso.", "ok");
+
+
         }
     }
 }

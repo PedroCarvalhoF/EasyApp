@@ -11,8 +11,7 @@ namespace EasyApp
         {
             InitializeComponent();
             _apiService = apiService;
-            MainPage =new NavigationPage(new LoginPage(_apiService));
-            
+            MainPage =new NavigationPage(new LoginPage(_apiService));            
         }
     }
 }
