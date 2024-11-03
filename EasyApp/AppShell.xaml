@@ -4,12 +4,31 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:EasyApp"
+    xmlns:pages="clr-namespace:EasyApp.Pages"
     Shell.FlyoutBehavior="Disabled"
-    Title="EasyApp">
+    Title="EasyApp"     
+    Shell.TabBarBackgroundColor="#E1DFEC"
+    Shell.TitleColor="#5C4E8E"
+    Shell.TabBarUnselectedColor="#5C4E8E"
+    Shell.TabBarTitleColor="#5C4E8E">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Vendas" Icon="dashboard_branco">
+            <ShellContent ContentTemplate="{DataTemplate pages:PdvsPage}"/>
+        </Tab>
+        <Tab Title="Produtos" Icon="produtos_white">
+            <ShellContent ContentTemplate="{DataTemplate pages:ProdutosPage}"/>
+        </Tab>
+        <Tab Title="Produtos" Icon="produtos_white">
+            <ShellContent ContentTemplate="{DataTemplate pages:ProdutosPage}"/>
+        </Tab>
+        <Tab Title="Produtos" Icon="produtos_white">
+            <ShellContent ContentTemplate="{DataTemplate pages:ProdutosPage}"/>
+        </Tab>
+        <Tab Title="Produtos" Icon="produtos_white">
+            <ShellContent ContentTemplate="{DataTemplate pages:ProdutosPage}"/>
+        </Tab>
+
+    </TabBar>
 
 </Shell>

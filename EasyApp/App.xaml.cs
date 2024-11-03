@@ -11,8 +11,20 @@ namespace EasyApp
         {
             InitializeComponent();
             _apiService = apiService;
-            MainPage =new NavigationPage(new LoginPage(_apiService));
-            
+
+            SetMainPage();
+        }
+
+        private void SetMainPage()
+        {
+            var accessToken = Preferences.Get("accestoken", string.Empty);
+            if (string.IsNullOrEmpty(accessToken))
+            {
+                MainPage = new NavigationPage(new LoginPage(_apiService));
+                return;
+            }
+
+            MainPage = new AppShell();
         }
     }
 }

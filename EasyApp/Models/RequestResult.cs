@@ -11,5 +11,17 @@
             Mensagem = erro;
             return this;
         }
+
+
+        public void TestarClass1()
+        {
+            var classTemp = Class1.CriarNovaIdade(25, 1);
+
+            lblDescricaoIdade.Text = classTemp.descricaoIdade;
+            if(classTemp.FreteGratis)
+            {
+
+            }
+        }
     }
 }

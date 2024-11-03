@@ -57,6 +57,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Pages\PdvsPage.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\dashboard_branco.png" />
+	  <None Remove="Resources\Images\produtos_white.png" />
 	  <None Remove="Resources\Images\usuario_cicle_cinza.png" />
 	  <None Remove="Resources\Images\usuario_verificado_10px_cinza.png" />
 	  <None Remove="Resources\Splash\logo_temp.svg" />
@@ -71,9 +77,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\InicialPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\PdvsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ProdutosPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionEasyAppHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>
