@@ -26,3 +26,6 @@ namespace EasyApp
         }
     }
 }
+
+//testando alteracao git BY PEDRO
+
