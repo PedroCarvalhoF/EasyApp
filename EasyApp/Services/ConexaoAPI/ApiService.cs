@@ -45,7 +45,7 @@ namespace EasyApp.Services.ConexaoAPI
 
                     if (response.IsSuccessStatusCode)
                     {
-                        var resposta = JsonSerializer.Deserialize<RequestResult<UsuarioLoginResponse>>(response.Content, _options);
+                        var resposta = JsonSerializer.Deserialize<RequestResult<UsuarioLoginResponse>>(response.Content!, _options);
 
                         return resposta ?? new RequestResult<UsuarioLoginResponse>();
                     }

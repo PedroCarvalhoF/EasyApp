@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\store_front.png" />
 	  <None Remove="Resources\Images\usuario_cicle_cinza.png" />
 	  <None Remove="Resources\Images\usuario_verificado_10px_cinza.png" />
 	  <None Remove="Resources\Splash\logo_temp.svg" />
@@ -71,6 +72,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -2,7 +2,7 @@
 
 public class UsuarioLoginResponse
 {
-    public bool sucesso => Erros.Count == 0;
+    public bool sucesso => Erros?.Count == 0;
     public List<string>? Erros { get; set; }
     public Guid IdUser { get; set; }
     public string? Nome { get; set; }

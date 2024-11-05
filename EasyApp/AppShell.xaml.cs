@@ -1,4 +1,6 @@
-﻿namespace EasyApp
+﻿using EasyApp.Pages;
+
+namespace EasyApp
 {
     public partial class AppShell : Shell
     {
